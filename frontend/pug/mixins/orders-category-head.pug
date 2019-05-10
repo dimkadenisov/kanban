@@ -1,0 +1,25 @@
+mixin orders-category-head(type)
+
+  if type === "done"
+    .orders-category-head.orders-category-head_done
+      span.orders-category-head__name.
+        Выполнен
+      .orders-category-head__text
+        span.orders-category-head__amount 9 999 шт.
+        span.orders-category-head__price 99 999 999 ₽
+  
+  else if type === "rejected"
+    .orders-category-head.orders-category-head_rejected
+      span.orders-category-head__name.
+        Отменен
+      .orders-category-head__text
+        span.orders-category-head__amount 9 999 шт.
+        span.orders-category-head__price 99 999 999 ₽
+
+  else
+    .orders-category-head
+      span.orders-category-head__name.
+        Подтвержден, ожидает оплаты
+      .orders-category-head__text
+        span.orders-category-head__amount 9 999 шт.
+        span.orders-category-head__price 99 999 999 ₽

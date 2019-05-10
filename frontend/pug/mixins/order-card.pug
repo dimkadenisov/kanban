@@ -1,0 +1,47 @@
+mixin order-card
+
+    li.order-card
+      .order-card__row.order-card__row_align-items_flex-end
+        span.order-card__number №7544
+        span.order-card__date 17.05.19 14:30
+      .order-card__row.order-card__row_flex-grow_1
+        span.order-card__customer Александр Заднепропетровский
+      .order-card__row.order-card__row_align-items_center
+        span.order-card__price 9 999 999,99 ₽
+        svg.order-card__icon.order-card__icon_rubl
+          use(xlink:href="#rubl")
+      .order-card__row.order-card__row_align-items_center.order-card__row_margin-vertical
+        span.order-card__service Длинное предлинное название службы
+        svg.order-card__icon.order-card__icon_bus
+          use(xlink:href="#bus")
+      .icons-block
+        a(href="#" title="Смореть товары").icons-block__item.icons-block__item__goods
+          svg.icons-block__icon
+            use(xlink:href="#paper")
+        a(href="#" title="Печать").icons-block__item
+          svg.icons-block__icon
+            use(xlink:href="#print")
+        a(href="#" title="Перейти к заказу").icons-block__item
+          svg.icons-block__icon
+            use(xlink:href="#arrow")
+      .all-goods.all-goods_hidden
+        span.all-goods__heading Товары:
+        ul.all-goods__list
+          li.all-goods__item
+            span.all-goods__name Длинное предлинное название товара
+            span.all-goods__amount 999 шт.
+          li.all-goods__item
+            span.all-goods__name Длинное предлинное название товара
+            span.all-goods__amount 999 шт.
+          li.all-goods__item
+            span.all-goods__name Длинное предлинное название товара
+            span.all-goods__amount 999 шт.
+          li.all-goods__item
+            span.all-goods__name Длинное предлинное название товара
+            span.all-goods__amount 999 шт.
+          li.all-goods__item
+            span.all-goods__name Длинное предлинное название товара
+            span.all-goods__amount 999 шт.
+          li.all-goods__item
+            span.all-goods__name Длинное предлинное название товара
+            span.all-goods__amount 999 шт.

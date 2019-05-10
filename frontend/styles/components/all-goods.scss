@@ -1,0 +1,45 @@
+.all-goods {
+  margin: 10px 0 0 0;
+  max-height: 150px;
+  overflow: hidden;
+  transition: max-height 0.4s, margin 0.4s, overflow 0.4s;
+
+  &_hidden {
+    max-height: 0;
+    margin: 0;
+  }
+
+  &__heading {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  &__list {
+    max-height: 100px;
+    margin: 10px 0 0 0;
+    overflow-y: auto;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin: 0 0 5px 0;
+    }
+  }
+
+  &__name {
+    padding: 0 5px 0 0;
+    font-size: 12px;
+  }
+
+  &__amount {
+    flex-shrink: 0;
+    padding: 0 0 0 5px;
+    font-size: 12px;
+  }
+}

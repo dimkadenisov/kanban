@@ -1,0 +1,28 @@
+extends ../components/page 
+include ../mixins/order-card
+include ../mixins/orders-category-head
+include ../mixins/button
+include ../mixins/orders-box
+
+block title
+  |Главная страница
+block link
+  link(href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic", rel="stylesheet")
+block content
+  object(data="assets/img/icons/sprite.svg", type="image/svg+xml", style="width: 0; height: 0; display: none;")
+    include ../../../public/assets/img/icons/sprite.svg
+  //- +order-card
+  //- +order-card("done")
+  //- +order-card("rejected")
+  //- +orders-category-head("waiting")
+  //- +orders-category-head
+  //- +orders-category-head("confirmed")
+  //- +orders-category-head("done")
+  //- +orders-category-head("rejected")
+  //- +button("Показать еще")
+
+  //- h1 Тест
+
+  +orders-box
+
+  //- h1 Тест

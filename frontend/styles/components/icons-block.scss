@@ -1,0 +1,29 @@
+.icons-block {
+  margin: 0 0 0 -5px;
+
+  &__item {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 50%;
+
+    &:hover {
+      background: lighten($gray-400, 30%);
+
+      .icons-block__icon {
+        fill: $gray-600;
+      }
+    }
+
+    &:not(:last-child) {
+      margin: 0 20px 0 0;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: $gray-400;
+  }
+}

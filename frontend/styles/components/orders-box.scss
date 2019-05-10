@@ -1,0 +1,97 @@
+.orders-box {
+  display: table;
+  margin: 0 -20px;
+  box-sizing: border-box;
+  color: $gray-700;
+  font-family: "PT Sans", sans-serif;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &__headings {
+    display: table-row;
+    position: sticky;
+    top: 0;
+    min-width: 100%;
+    float: left;
+    margin-top: 5px;
+    background: #e1eaeb;
+    border-top: 1px solid rgba($black, 0.08);
+    border-bottom: 1px solid rgba($black, 0.08);
+
+    &_scrolled {
+      box-shadow: 0 3px 3px 0 rgba($black, 0.2);
+    }
+  }
+
+  &__main {
+    display: table-row;
+    min-width: 100%;
+    float: left;
+    border-bottom: 1px solid rgba($black, 0.08);
+  }
+
+  &__more {
+    display: table-row;
+    width: 100%;
+    float: left;
+    border-top: 1px solid rgba($black, 0.08);
+
+    .button {
+      margin: 40px auto;
+    }
+  }
+
+  &__list {
+    display: table-cell;
+    width: 245px;
+    min-height: 560px;
+    height: 100%;
+    list-style: none;
+
+    &:not(:first-child) {
+      border-left: 1px solid rgba($black, 0.08);
+    }
+
+    &_done {
+      .order-card {
+        background: $gray-300;
+      }
+    }
+
+    &_rejected {
+      .order-card {
+        background: $gray-300;
+      }
+
+      .order-card__number {
+        color: $gray-400;
+      }
+
+      .order-card__date {
+        color: $gray-400;
+      }
+
+      .order-card__customer {
+        color: $gray-400;
+      }
+
+      .order-card__price {
+        color: $gray-400;
+      }
+
+      .order-card__icon {
+        fill: $gray-400;
+      }
+
+      .order-card__service {
+        color: $gray-400;
+      }
+
+      .icons-block__icon {
+        fill: $gray-400;
+      }
+    }
+  }
+}

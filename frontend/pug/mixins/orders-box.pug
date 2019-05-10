@@ -1,0 +1,10 @@
+include orders-box__headings
+include orders-box__main
+include button
+
+mixin orders-box
+  .orders-box
+    +orders-box__headings
+    +orders-box__main
+    .orders-box__more
+      +button("Показать еще")

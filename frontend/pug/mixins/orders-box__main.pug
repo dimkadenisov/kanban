@@ -1,0 +1,22 @@
+include order-card
+
+mixin orders-box__main
+  .orders-box__main
+    ul.orders-box__list
+      +order-card
+      +order-card
+    ul.orders-box__list
+      +order-card
+      +order-card
+    ul.orders-box__list
+      +order-card
+      +order-card
+    ul.orders-box__list
+      +order-card
+      +order-card
+    ul.orders-box__list.orders-box__list_done
+      +order-card
+      +order-card
+    ul.orders-box__list.orders-box__list_rejected
+      +order-card
+      +order-card

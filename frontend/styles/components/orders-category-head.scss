@@ -1,0 +1,133 @@
+.orders-category-head {
+  display: table-cell;
+  width: 245px;
+  min-width: 245px;
+  padding: 15px;
+
+  &:not(:first-child) {
+    border-left: 1px solid rgba($black, 0.08);
+  }
+
+  &_done {
+    .orders-category-head__name {
+      background: $green-500;
+
+      &::after {
+        background: $green-500;
+      }
+    }
+
+    .orders-category-head__amount {
+      color: $green-500;
+    }
+
+    .orders-category-head__price {
+      color: $green-500;
+    }
+  }
+
+  &_rejected {
+    .orders-category-head__name {
+      background: $gray-500;
+      border-radius: 4px;
+
+      &::after {
+        display: none;
+        background: $gray-500;
+      }
+    }
+
+    .orders-category-head__amount {
+      color: $gray-400;
+    }
+
+    .orders-category-head__price {
+      color: $gray-400;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 210px;
+    width: 100%;
+    height: 40px;
+    padding: 0 0 0 15px;
+    margin: 0 0 15px 0;
+    background: linear-gradient(to bottom, $blue-500 0%, $blue-600 100%);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    color: $white;
+    font-size: 14px;
+    font-weight: bold;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 15px;
+      height: 40px;
+      background: linear-gradient(to bottom, $blue-500 0%, $blue-600 100%);
+      clip-path: polygon(100% 50%, 0 0, 0 100%);
+    }
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    max-width: 214px;
+  }
+
+  &__amount {
+    display: inline-block;
+    flex-shrink: 0;
+    margin: 0 0 0 15px;
+    color: $blue-500;
+    font-weight: bold;
+  }
+
+  &__price {
+    display: inline-block;
+    flex-shrink: 0;
+    margin: 0 15px 0 0;
+    color: $blue-500;
+    font-weight: bold;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  //- IE10+ specific styles go here
+
+  .orders-category-head {
+    &__name {
+      background: $blue-500;
+
+      &::after {
+        width: 0;
+        height: 0;
+        border-left: 15px solid $blue-500;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        background: none;
+        clip-path: none;
+      }
+    }
+
+    &_done {
+      .orders-category-head__name {
+        &::after {
+          width: 0;
+          height: 0;
+          border-left: 15px solid $green-500;
+          border-top: 20px solid transparent;
+          border-bottom: 20px solid transparent;
+          background: none;
+          clip-path: none;
+        }
+      }
+    }
+  }
+}
