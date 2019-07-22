@@ -83,6 +83,10 @@
     margin: 15px;
     border: 5px dashed $gray-500;
   }
+
+  &:hover {
+    box-shadow: 0 0 2px 2px rgba($gray-400, 0.5);
+  }
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {

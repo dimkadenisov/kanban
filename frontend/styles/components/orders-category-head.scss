@@ -3,6 +3,7 @@
   width: 245px;
   min-width: 245px;
   padding: 15px;
+  vertical-align: top;
 
   &:not(:first-child) {
     border-left: 1px solid rgba($black, 0.08);
@@ -52,8 +53,8 @@
     position: relative;
     max-width: 210px;
     width: 100%;
-    height: 40px;
-    padding: 0 0 0 15px;
+    min-height: 60px;
+    padding: 7px 0 7px 15px;
     margin: 0 0 15px 0;
     background: linear-gradient(to bottom, $blue-500 0%, $blue-600 100%);
     border-top-left-radius: 4px;
@@ -69,7 +70,7 @@
       top: 0;
       left: 100%;
       width: 15px;
-      height: 40px;
+      height: 100%;
       background: linear-gradient(to bottom, $blue-500 0%, $blue-600 100%);
       clip-path: polygon(100% 50%, 0 0, 0 100%);
     }
@@ -122,8 +123,8 @@
           width: 0;
           height: 0;
           border-left: 15px solid $green-500;
-          border-top: 20px solid transparent;
-          border-bottom: 20px solid transparent;
+          border-top: 30px solid transparent;
+          border-bottom: 30px solid transparent;
           background: none;
           clip-path: none;
         }

@@ -160,8 +160,13 @@ ul {
 .order-card__placeholder {
   width: calc(100% - 30px);
   height: 200px;
-  margin: 0 15px;
+  margin: 15px;
   border: 5px dashed #888;
+}
+
+.order-card:hover {
+  -webkit-box-shadow: 0 0 2px 2px rgba(153,153,153,.5);
+  box-shadow: 0 0 2px 2px rgba(153,153,153,.5);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -206,6 +211,7 @@ ul {
   width: 245px;
   min-width: 245px;
   padding: 15px;
+  vertical-align: top;
 }
 
 .orders-category-head:not(:first-child) {
@@ -239,7 +245,6 @@ ul {
 
 .orders-category-head__name,
 .orders-category-head__name::after {
-  height: 40px;
   background: -webkit-gradient(linear,left top,left bottom,from(#2196f3),to(#037bda));
   background: linear-gradient(to bottom,#2196f3 0%,#037bda 100%);
 }
@@ -252,7 +257,8 @@ ul {
   -ms-flex-align: center;
   align-items: center;
   max-width: 210px;
-  padding: 0 0 0 15px;
+  min-height: 60px;
+  padding: 7px 0 7px 15px;
   margin: 0 0 15px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -270,6 +276,7 @@ ul {
   top: 0;
   left: 100%;
   width: 15px;
+  height: 100%;
   -webkit-clip-path: polygon(100% 50%,0 0,0 100%);
   clip-path: polygon(100% 50%,0 0,0 100%);
 }
@@ -317,6 +324,8 @@ ul {
 
   .orders-category-head_done .orders-category-head__name::after {
     border-left: 15px solid #4caf50;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
   }
 }
 
@@ -361,6 +370,7 @@ ul {
 
 .orders-box {
   display: table;
+  margin: 0 -20px;
   color: #333;
   font-family: "PT Sans",sans-serif;
 }

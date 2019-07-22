@@ -15,7 +15,7 @@ gulp.task('pug', () => {
     $.pug(),
     prettify(),
     gulp.dest('public')
-    
+
   ).on('error', $.notify.onError(function(err) {
     return {
       title: 'pug',
@@ -107,7 +107,7 @@ gulp.task('scripts', () => {
 //     .src('node_modules/swiper/dist/css/swiper.min.css', {since: gulp.lastRun('copy:styles:swiper')})
 //     .pipe($.newer('public/styles'))
 //     .pipe(gulp.dest('public/styles'));
-// }); 
+// });
 
 // gulp.task('copy:styles:fancybox', () => {
 //   return gulp
@@ -143,7 +143,7 @@ gulp.task('svgSprite', function () {
       },
     }),
     gulp.dest('public/assets/img/icons')
-  ) 
+  )
 });
 
 gulp.task('svg', function() {
@@ -240,4 +240,4 @@ gulp.task('server', () => {
   browserSync.watch('public/**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('dev', gulp.series('build', gulp.parallel('watch', 'server')));
+gulp.task('default', gulp.series('build', gulp.parallel('watch', 'server')));
