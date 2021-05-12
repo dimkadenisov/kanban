@@ -46,6 +46,6 @@
     "masonry-layout": "^4.2.2",
     "popper.js": "^1.14.7",
     "stickyfilljs": "^2.1.0",
-    "swiper": "^4.5.0"
+    "swiper": "^6.5.1"
   }
 }
